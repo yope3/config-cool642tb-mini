@@ -98,7 +98,7 @@
 
         Arrow {
             bindings = <
-&kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp LS(AMPS)  &kp LS(SQT)  &kp LS(LPAR)  &kp LS(RPAR)  &kp ESC
+&kp LS(EXCL)  &kp JP_DQUOTE  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp JP_AMPERSAND  &kp JP_QUOTE  &kp JP_LPAREN  &kp JP_RPAREN  &kp ESC
 &trans        &kp HOME     &kp UP         &kp END       &trans         &trans      &trans  &trans        &kp HOME     &kp UP        &kp END       &kp BSPC
 &trans        &kp LEFT     &kp DOWN       &kp RIGHT     &trans         &trans      &trans  &trans        &kp LEFT     &kp DOWN      &kp RIGHT     &kp DEL
 &trans        &trans       &trans         &trans        &trans         &trans      &trans  &trans                                                 &trans
@@ -108,8 +108,8 @@
         Nums {
             bindings = <
 &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
-&kp CARET      &kp AT         &kp FSLH       &kp MINUS      &kp BSLH      &trans      &trans  &kp SEMI      &kp COLON     &kp LBKT      &kp RBKT      &kp BSLH
-&kp LS(TILDE)  &kp LS(GRAVE)  &kp LS(QMARK)  &kp LS(EQUAL)  &kp LS(PIPE)  &trans      &trans  &kp LS(PLUS)  &kp LS(STAR)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(UNDER)
+&kp JP_CARET      &kp JP_AT         &kp FSLH       &kp MINUS      &kp JP_YEN      &trans      &trans  &kp SEMI      &kp JP_COLON     &kp JP_LBRACKET      &kp JP_RBRACKET      &kp JP_YEN
+&kp JP_TILDE  &kp JP_BACKQUOTE  &kp LS(QMARK)  &kp JP_EQUAL  &kp JP_PIPE  &trans      &trans  &kp JP_PLUS  &kp JP_ASTERISK  &kp JP_LBRACE  &kp JP_RBRACE  &kp JP_UNDERSCORE
 &trans         &trans         &trans         &trans         &trans        &trans      &trans  &trans                                                  &trans
             >;
 
