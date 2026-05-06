@@ -61,6 +61,7 @@
             tap-ms = <20>;
         };
 
+        // 【Mod-Tap用】ホールドでMod(Shift等)、タップでキー、リピート許可
         hr: hold_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -68,6 +69,16 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+        };
+
+        // 【Layer-Tap用】ホールドでLayer、タップでキー、リピート許可
+        lr: layer_tap_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>; 
         };
     };
 
@@ -79,7 +90,7 @@
 &kp Q      &kp W         &kp E         &kp R    &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &lt 4 F  &kp G        &kp LC(Y)              &kp PRINTSCREEN      &kp H        &kp J  &lt 5 K    &kp L    &kp MINUS
 &kp Z      &kp X         &kp C         &kp V    &kp B        &kp LC(Z)              &kp ESC              &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &lt 1 SPACE  &mt LSHIFT DELETE      &mt RSHFT BACKSPACE  &lt 2 ENTER                             &lt 3 K_CONTEXT_MENU
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &lr 1 SPACE  &hr LSHIFT DELETE      &hr RSHFT BACKSPACE  &lr 2 ENTER                             &lr 3 K_CONTEXT_MENU
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
