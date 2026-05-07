@@ -62,6 +62,7 @@
         };
 
         // 【Mod-Tap用】ホールドでMod(Shift等)、タップでキー、リピート許可
+
         hr: hold_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -72,13 +73,14 @@
         };
 
         // 【Layer-Tap用】ホールドでLayer、タップでキー、リピート許可
+
         lr: layer_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            bindings = <&mo>, <&kp>; 
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -99,18 +101,18 @@
         Arrow {
             bindings = <
 &kp LS(EXCL)  &kp JP_DQUOTE  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp JP_AMPERSAND  &kp JP_QUOTE  &kp JP_LPAREN  &kp JP_RPAREN  &kp ESC
-&trans        &kp HOME     &kp UP         &kp END       &trans         &trans      &trans  &trans        &kp HOME     &kp UP        &kp END       &kp BSPC
-&trans        &kp LEFT     &kp DOWN       &kp RIGHT     &trans         &trans      &trans  &trans        &kp LEFT     &kp DOWN      &kp RIGHT     &kp DEL
-&trans        &trans       &trans         &trans        &trans         &trans      &trans  &trans                                                 &trans
+&trans        &kp HOME       &kp UP         &kp END       &trans         &trans      &trans  &trans            &kp HOME      &kp UP         &kp END        &kp BSPC
+&trans        &kp LEFT       &kp DOWN       &kp RIGHT     &trans         &trans      &trans  &trans            &kp LEFT      &kp DOWN       &kp RIGHT      &kp DEL
+&trans        &trans         &trans         &trans        &trans         &trans      &trans  &trans                                                        &trans
             >;
         };
 
         Nums {
             bindings = <
-&kp N1         &kp N2         &kp N3         &kp N4         &kp N5                            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
-&kp JP_CARET      &kp JP_AT         &kp FSLH       &kp MINUS      &kp JP_YEN      &trans      &trans  &kp SEMI      &kp JP_COLON     &kp JP_LBRACKET      &kp JP_RBRACKET      &kp JP_YEN
-&kp JP_TILDE  &kp JP_BACKQUOTE  &kp LS(QMARK)  &kp JP_EQUAL  &kp JP_PIPE  &trans      &trans  &kp JP_PLUS  &kp JP_ASTERISK  &kp JP_LBRACE  &kp JP_RBRACE  &kp JP_UNDERSCORE
-&trans         &trans         &trans         &trans         &trans        &trans      &trans  &trans                                                  &trans
+&kp N1        &kp N2            &kp N3         &kp N4        &kp N5                           &kp N6       &kp N7           &kp N8           &kp N9           &kp N0
+&kp JP_CARET  &kp JP_AT         &kp FSLH       &kp MINUS     &kp JP_YEN   &trans      &trans  &kp SEMI     &kp JP_COLON     &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_YEN
+&kp JP_TILDE  &kp JP_BACKQUOTE  &kp LS(QMARK)  &kp JP_EQUAL  &kp JP_PIPE  &trans      &trans  &kp JP_PLUS  &kp JP_ASTERISK  &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_UNDERSCORE
+&trans        &trans            &trans         &trans        &trans       &trans      &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -118,10 +120,10 @@
 
         Functions {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &trans  &trans  &trans  &trans  &kp F12
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                          &trans
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans        &trans        &trans        &trans        &trans        &trans              &trans  &trans  &trans  &trans  &trans  &kp F11
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL      &trans  &trans  &trans  &trans  &trans  &kp F12
+&trans        &trans        &trans        &trans        &trans        &trans              &trans  &trans                          &trans
             >;
         };
 
